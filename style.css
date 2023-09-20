@@ -1,0 +1,39 @@
+ .btn-checked {
+   color: #fff;
+   background-color: #dc3545;
+   border-color: #dc3545;
+ }
+
+ .current-page {
+   color: #fff;
+   background-color: #0d6efd;
+   border-color: #0d6efd;
+ }
+
+ .fa-venus {
+   color: #dc3545;
+ }
+
+ .fa-mars-stroke-up {
+   color: #0a6beb;
+ }
+
+ .btn-show-user {
+   width: 45%;
+ }
+
+ .btn-add-favorite {
+   width: 45%;
+ }
+
+ .btn-remove-favorite {
+   width: 30%;
+ }
+
+ .modal-button {
+   width: 50%
+ }
+
+ .modal-btn {
+   width: 35%
+ }

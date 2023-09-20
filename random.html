@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>隨機推薦</title>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">隨機推薦</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+              星際交友首頁
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="favorite.html">我的關注清單</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="random.html">隨機推薦</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-12 mt-2 mb-3 d-flex justify-content-center" id="random-user">
+        <button class="btn btn-primary btn-random">
+          <strong> 隨機推薦ＧＯ！ </strong>
+          <i class="fa-solid fa-dice fa-shake fa-2xl" style="color: #ffffff;"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row" id="data-panel">
+      <!-- Render User List -->
+    </div>
+  </div>
+  <!-- paginator -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="paginator">
+      <!-- 由js動態產生 -->
+    </ul>
+  </nav>
+
+  <!-- User Modal -->
+  <div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="user-modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body" id="user-modal-body">
+          <div class="row">
+            <div class="col-sm-6" id="user-modal-avatar">
+              <img src="https://robohash.org/repellatvoluptateomnis.png?size=300x300&set=set1" alt="User Avatar"
+                class="img-fluid">
+            </div>
+            <div class="col-sm-6">
+              <p> <em id="user-modal-region">Region : TW</em></p>
+              <p id="user-modal-email">Email : tristan87@example.com</p>
+              <p id="user-modal-gender">Gender : male</p>
+              <p id="user-modal-age">Age : 32</p>
+              <p id="user-modal-birthday">Birthday : 2020/01/05</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-button d-flex justify-content-sm-around ">
+            <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-danger btn-add-favorite modal-btn" id="user-modal-add-button"
+              data-id="">關注</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/a2e6487f7c.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="./random.js"></script>
+</body>
+
+</html>
